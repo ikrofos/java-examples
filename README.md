@@ -1,3 +1,3 @@
 # Java заметки
 
-[https://github.com/ikrofos/java-examples/wiki](s)
+[Конструктор](https://github.com/ikrofos/java-examples/wiki)
