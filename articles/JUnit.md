@@ -8,6 +8,9 @@
 - [Create tests (www.jetbrains.com)](https://www.jetbrains.com/help/idea/create-tests.html#naming-pattern-for-tests)
 - [JUnit 5 (www.jetbrains.com)](https://www.jetbrains.com/help/idea/junit.html)
 - [Writing Tests with JUnit 5](https://blog.jetbrains.com/idea/2020/09/writing-tests-with-junit-5/)
+- [JUnit 5 Display Names](https://mkyong.com/junit5/junit-5-display-names/)
+
+
 https://www.jetbrains.com/help/idea/tdd-with-intellij-idea.html
 https://www.jetbrains.com/help/idea/performing-tests.html#RedebugFailedTests
 - [Параметризированные тесты в JUnit 5](https://urvanov.ru/2020/11/27/%D0%BF%D0%B0%D1%80%D0%B0%D0%BC%D0%B5%D1%82%D1%80%D0%B8%D0%B7%D0%B8%D1%80%D0%BE%D0%B2%D0%B0%D0%BD%D0%BD%D1%8B%D0%B5-%D1%82%D0%B5%D1%81%D1%82%D1%8B-%D0%B2-junit-5/)
