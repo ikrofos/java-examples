@@ -12,8 +12,8 @@
 - [На русском (https://proselyte.net/)](https://proselyte.net/tutorials/maven/introduction/)
 - [Использование Maven для построения Java проектов. Часть 1](https://www.youtube.com/watch?v=IAbZVA4tK6M)
 - [Использование Maven для построения Java проектов. Часть 2](https://www.youtube.com/watch?v=Grl1GhklwDQ)
+- [https://maven.apache.org/pom.html](POM Reference) [Описание тегов, теги компании, разработчиков]
 
-https://maven.apache.org/pom.html
 
 
 Руководство
