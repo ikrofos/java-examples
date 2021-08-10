@@ -8,12 +8,12 @@
 
 Источники
 ---
-- [Введение (java-course.ru)](https://www.youtube.com/watch?v=c2sBG5emv1o)
-- [На русском (https://proselyte.net/)](https://proselyte.net/tutorials/maven/introduction/)
-- [Использование Maven для построения Java проектов. Часть 1](https://www.youtube.com/watch?v=IAbZVA4tK6M)
-- [Использование Maven для построения Java проектов. Часть 2](https://www.youtube.com/watch?v=Grl1GhklwDQ)
-- [https://maven.apache.org/pom.html](POM Reference) [Описание тегов, теги компании, разработчиков]
-
+- [1. Введение (java-course.ru)](https://www.youtube.com/watch?v=c2sBG5emv1o)
+- [2. На русском (https://proselyte.net/)](https://proselyte.net/tutorials/maven/introduction/)
+- [3. Использование Maven для построения Java проектов. Часть 1](https://www.youtube.com/watch?v=IAbZVA4tK6M)
+- [4. Использование Maven для построения Java проектов. Часть 2](https://www.youtube.com/watch?v=Grl1GhklwDQ)
+- [5. POM Reference](https://maven.apache.org/pom.html) - Описание тегов, теги компании, разработчиков
+- [6. Управление зависимостями в Maven](https://easyjava.ru/ecosystem/buildtools/maven/upravlenie-zavisimostyami-v-maven/)
 
 
 Руководство
@@ -103,6 +103,8 @@ net.proselyte.video:maven-video:1.1
 
 Зависимости 
 ---
+Все зависимости перечисляются в секции `<dependencies/>`, одна за одной, в любом порядке.
+
 ```xml
     <dependencies>
         <!-- https://mvnrepository.com/artifact/org.junit.jupiter/junit-jupiter-engine -->
@@ -120,7 +122,6 @@ net.proselyte.video:maven-video:1.1
 - [Dependency Scope (maven.apache.org)](https://maven.apache.org/guides/introduction/introduction-to-dependency-mechanism.html#Dependency_Scope)
 - [What is `scope` under `dependency` in pom.xml for? (stackoverflow.com)](https://stackoverflow.com/a/47121804)
 
-
 Элемент \<`scope`\> может принимать 6 значений: компиляция (compile), предоставление (provided), время выполнения (runtime), проверка (test), система (system) и импорт (import).
 
 - `compile`: область по умолчанию, путь к классам доступен как для `src/main`, так и для `src/test`. Будет работать в момент компиляции и будет включён в пакет. 
@@ -129,6 +130,19 @@ net.proselyte.video:maven-video:1.1
 - `runtime`: не требуется для компиляции требуется только во время выполнения
 - `system` - похоже на `provided`, но библиотека подключается из вне. Не в одном репозитории, а на стороне.
 - `import`: может импортировать только другие POM в <dependencyManagement/>, доступный только в Maven 2.0.9 или новее. Смена родительского объекта не всегда практична, во многих проектах уже указан родительский проект для управления стандартами своей организации. dependencyManagement позволяет нам добавлять родительский проект, не создавая родительский, это похоже на множественное наследование.
+
+Переменные в maven [6]
+---
+Перед тем как продолжить добавлять зависимости, нужно сделать шаг к переменным в maven. Maven позволяет задавать переменные (а сам задаёт ещё больше), значения которых впоследствии можно использовать где угодно:
+```xml
+<properties>
+    <myvar>1.2.3</myvar>
+</properties>
+ 
+<!-- далее в коде -->
+<version>${myvar}</version>
+```
+И в тег `<version/>`  будет подставлено значение `1.2.3`
 
 
 Установка 
